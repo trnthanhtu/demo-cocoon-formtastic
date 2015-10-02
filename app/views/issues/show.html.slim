@@ -1,0 +1,17 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @issue.name
+p
+  strong
+    | Assignment:
+  = @issue.assignment
+p
+  strong
+    | Project:
+  = @issue.project
+= link_to 'Edit', edit_issue_path(@issue)
+|  | 
+= link_to 'Back', issues_path

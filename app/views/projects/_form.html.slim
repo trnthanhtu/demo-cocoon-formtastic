@@ -1,0 +1,13 @@
+= semantic_form_for @project do |f|
+  = f.inputs do
+    = f.input :name
+    = f.input :auther
+
+  h3 Issues
+  #issues
+    = f.semantic_fields_for :issues do |issues|
+      = render 'issue_fields', f: issues
+    .links
+      = link_to_add_association 'add issues', f, :issues
+  = f.actions do
+    = f.action :submit, :as => :input
