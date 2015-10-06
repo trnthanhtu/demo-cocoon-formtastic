@@ -45,7 +45,9 @@ group :development do
   gem 'spring'
 end
 
-gem "slim-rails"
+gem 'slim-rails'
 gem 'html2slim'
 gem 'cocoon'
 gem 'formtastic'
+# Social button sharing
+gem 'social-share-button', github: "huacnlee/social-share-button"
