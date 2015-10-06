@@ -8,6 +8,32 @@ p
   strong
     | Auther:
   = @project.auther
+h5
+  | Social share button default
+= social_share_button_tag(@project.name)
+
+/ h5
+/   | Social share button: specife the title for the special social network
+/ = social_share_button_tag(@project.name, 'data-facebook-title' => 'The Titel For Facebook')
+
+h5
+  | Make Popup / (fix: gem 'social-share-button', github: "huacnlee/social-share-button")(
+= social_share_button_tag(@project.name, :popup => "true", url: "zing.mp3.vn")
+
+h5 
+  | Specify URL / sharing with your app's url
+  p
+    | Example 1
+  = social_share_button_tag(@project.name, url: "zing.mp3.vn")
+  p
+    | Example 2
+  = social_share_button_tag(@project.name, :url => "zing.mp3.vn", :image => "http://afamily1.vcmedia.vn/k:thumb_w/600/D7prXinbUB7s5ppWxBGqtwKrIZ1zKF/Image/2013/08/20130814afamilyPAdatkytruonghinhdumuonvuotmatphambangbang-%285%29-68777/dac-ky-truong-hinh-du-muon-vuot-mat-pham-bang-bang.jpg", desc: "demo", via: "Google")
+
+  p
+    | Example 3
+  = social_share_button_tag(@project.name, :image => "http://cdn.playbuzz.com/cdn/0eda49f1-bfae-43b5-82ed-e10360b162d4/061961e3-dd70-494d-8ca6-c252fd9e2b09.jpg", :'data-type' => 'photo')
+
+
 = link_to 'Edit', edit_project_path(@project)
 |  | 
 = link_to 'Back', projects_path

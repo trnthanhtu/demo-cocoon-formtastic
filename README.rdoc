@@ -2,4 +2,6 @@ https://github.com/nathanvda/cocoon
 
 https://github.com/justinfrench/formtastic
 
+https://github.com/huacnlee/social-share-button
+
 rails 4.2.4
